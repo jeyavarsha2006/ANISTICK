@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AniStick - Anime Sticker Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">AniStick</div>
+    <input type="text" id="searchBar" placeholder="Search stickers...">
+    <nav>
+      <button onclick="toggleWishlist()">❤️ Wishlist</button>
+      <button id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <section class="categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('Naruto')">Naruto</button>
+    <button onclick="filterCategory('OnePiece')">One Piece</button>
+    <button onclick="filterCategory('JJK')">JJK</button>
+  </section>
+
+  <main class="gallery" id="gallery">
+    <!-- JS will load products here -->
+  </main>
+
+  <aside class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: ₹<span id="totalPrice">0</span></p>
+    <button onclick="checkout()">Proceed to Pay 💳</button>
+    <button onclick="saveCart()">💾 Save Cart</button>
+    <button onclick="clearCart()">🗑️ Clear Cart</button>
+    <button onclick="closeCart()">Close</button>
+  </aside>
+
+  <aside class="wishlist" id="wishlist">
+    <h2>Wishlist ❤️</h2>
+    <ul id="wishlistItems"></ul>
+    <button onclick="closeWishlist()">Close</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

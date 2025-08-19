@@ -1,0 +1,165 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #ff4b2b, #1f1c2c);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+header input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  border: none;
+}
+
+nav button {
+  background: #ff4b2b;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #e03e1f;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+
+.categories button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.categories button:hover {
+  background: #0056b3;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}
+
+.card button {
+  margin-top: 8px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #333;
+}
+
+.cart,
+.wishlist {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: #fefefe;
+  border-left: 3px solid #ff4b2b;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.cart.open,
+.wishlist.open {
+  right: 0;
+}
+
+.cart h2,
+.wishlist h2 {
+  color: #ff4b2b;
+}
+
+.cart ul,
+.wishlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li,
+.wishlist li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart button,
+.wishlist button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff4b2b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart button:hover,
+.wishlist button:hover {
+  background-color: #e03e1f;
+}
